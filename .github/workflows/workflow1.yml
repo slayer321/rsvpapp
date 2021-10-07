@@ -7,10 +7,6 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-
-    
-
     trivy_scan:
     name: scan for vulnuribility
     runs-on: ubuntu-latest
