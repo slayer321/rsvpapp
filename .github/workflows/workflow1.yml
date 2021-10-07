@@ -25,6 +25,3 @@ jobs:
           ignore-unfixed: true
           vuln-type: 'os,lib'
           severity: 'CRITICAL,HIGH'
-
-
-
