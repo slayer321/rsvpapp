@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-    trivy_scan:
+  trivy_scan:
     name: scan for vulnuribility
     runs-on: ubuntu-latest
     steps:
