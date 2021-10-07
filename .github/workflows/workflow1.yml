@@ -21,6 +21,6 @@ jobs:
           image-ref: 'sachin/trivy-demo'
           format: 'table'
           exit-code: '1'
-          ignore-unfixed: true
+          ignore-unfixed: false
           vuln-type: 'os'
           severity: 'CRITICAL,HIGH'
