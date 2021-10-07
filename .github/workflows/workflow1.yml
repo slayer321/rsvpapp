@@ -1,5 +1,4 @@
-name: Django CI
-
+name: trivy-scan
 on:
   push:
     branches: [ master ]
