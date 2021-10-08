@@ -1,0 +1,25 @@
+name: trivy-scan
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  trivy_scan:
+    name: scan for vulnuribility
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build an image from Dockerfile
+        run: |
+          docker build -t sachin/trivy-demo .
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master   
+        with:
+          image-ref: alpine:latest
+          format: 'table'
+          exit-code: '1'
+          ignore-unfixed: false
+          vuln-type: 'os'
+          severity: 'CRITICAL,HIGH'
