@@ -17,7 +17,7 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master   
         with:
-          image-ref: 'sachin/trivy-demo'
+          image-ref: alpine:latest
           format: 'table'
           exit-code: '1'
           ignore-unfixed: false
